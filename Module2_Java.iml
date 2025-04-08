@@ -5,7 +5,11 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/system-time/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vong_lap/kiem-tra-so-nguyen-to/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vong_lap/hien-thi-cac-loai-hinh/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vong_lap/thiet-ke-menu/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/vong_lap/tinh-tien-lai/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vong_lap/uoc-so-chung-lon-nhat/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/vong_lap/tinh-tien-lai/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
