@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/3mang-va-phuong-thuc/3mang-va-phuong-thuc.iml" filepath="$PROJECT_DIR$/3mang-va-phuong-thuc/3mang-va-phuong-thuc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4Lop-doi-tuong/4Lop-doi-tuong.iml" filepath="$PROJECT_DIR$/4Lop-doi-tuong/4Lop-doi-tuong.iml" />
       <module fileurl="file://$PROJECT_DIR$/Module2_Java.iml" filepath="$PROJECT_DIR$/Module2_Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Operator-Expression/Operator-Expression.iml" filepath="$PROJECT_DIR$/Operator-Expression/Operator-Expression.iml" />
       <module fileurl="file://$PROJECT_DIR$/Variable-DataType/Variable-DataType.iml" filepath="$PROJECT_DIR$/Variable-DataType/Variable-DataType.iml" />
@@ -17,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/tinh-nam-nhuan/leap-year-calculator.iml" filepath="$PROJECT_DIR$/tinh-nam-nhuan/leap-year-calculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/linear-equation-resolver/linear-equation-resolver.iml" filepath="$PROJECT_DIR$/linear-equation-resolver/linear-equation-resolver.iml" />
       <module fileurl="file://$PROJECT_DIR$/loi-chao/loi-chao.iml" filepath="$PROJECT_DIR$/loi-chao/loi-chao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4Lop-doi-tuong/lop-hinh-chu-nhat/lop-hinh-chu-nhat.iml" filepath="$PROJECT_DIR$/4Lop-doi-tuong/lop-hinh-chu-nhat/lop-hinh-chu-nhat.iml" />
       <module fileurl="file://$PROJECT_DIR$/ngay-trong-thang/ngay-trong-thang.iml" filepath="$PROJECT_DIR$/ngay-trong-thang/ngay-trong-thang.iml" />
       <module fileurl="file://$PROJECT_DIR$/doc-so-thanh-chu/readnumbersintowords.iml" filepath="$PROJECT_DIR$/doc-so-thanh-chu/readnumbersintowords.iml" />
       <module fileurl="file://$PROJECT_DIR$/3mang-va-phuong-thuc/so-lon-nhat-trong-mang-hai-chieu/so-lon-nhat-trong-mang-hai-chieu.iml" filepath="$PROJECT_DIR$/3mang-va-phuong-thuc/so-lon-nhat-trong-mang-hai-chieu/so-lon-nhat-trong-mang-hai-chieu.iml" />
