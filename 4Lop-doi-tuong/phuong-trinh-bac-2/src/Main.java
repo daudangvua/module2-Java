@@ -17,7 +17,7 @@ public class Main {
         System.out.println("Phương trình bậc hai sau khi nhập là: \n"+ quadraticEquation.getA()+"x\u00B2 + " + quadraticEquation.getB()+"x + " + quadraticEquation.getC()+" = 0");
         System.out.println("delta= "+quadraticEquation.getDiscriminant());
         if(Double.isNaN(quadraticEquation.getRoot1()) && Double.isNaN(quadraticEquation.getRoot2())) {
-            System.out.println("Phương trình vô nghiệm.");
+            System.out.println("Phương trình không có nghiệm.");
         } else if(quadraticEquation.getRoot1() == quadraticEquation.getRoot2()) {
             System.out.println("Phương trình có nghiệm kép: x =" + quadraticEquation.getRoot1());
         } else {
