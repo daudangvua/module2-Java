@@ -1,3 +1,5 @@
+import java.net.SocketOption;
+
 public class Main {
     public static void main(String[] args) {
         Student[] student = new Student[5];
@@ -22,6 +24,12 @@ public class Main {
         }
         System.out.println("Diem lớn hơn 5: " + diem);
 
-
-}
+        int index=0;
+        for(int i = 0;i<student.length;i++){
+            if (student[i].Fullname=="Tran Văn A") {
+                index = i;
+            }
+        }
+        System.out.printf("Email Tran Văn A la: " + student[index].Email);
+    }
 }
