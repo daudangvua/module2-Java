@@ -10,31 +10,53 @@ public class Main {
         products[4] = new Product(05,"ghế",230000,11);
         Product.setStoreName("Kho miền Nam");
 
+        inAll(products);
+
+        printInventoryStats();
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("San pham can tim:");
+        String input = sc.nextLine();
+        Product result= findName(products, input);
+        if(result!=null){
+            System.out.println("San pham tim thay:");
+            result.display();
+        }else {
+            System.out.println("Khong tim thay san pham.");
+        }
+
+        million(products);
+
+        Product maxQuantity = checkMax(products);
+        System.out.println("San pham co so luong ton kho lon nhat: ");
+        maxQuantity.display();
+
+    }
+
+    public static void printInventoryStats() {
+        System.out.println("Tổng số sản phẩm: " + Product.getTotalProduct());
+        System.out.println("Giá trị kho hàng: " + Product.totalInventoryVal + " VND");
+        System.out.println("Giá trung bình: " + Product.getAveragePrice() + " VND");
+    }
+
+    public static void inAll(Product[] products) {
         for (Product p: products) {
             p.display();
             System.out.println();
         }
+    }
 
-        System.out.println("Tổng số sản phẩm: "+Product.totalProduct);
-        System.out.println("Giá trị kho hàng: "+Product.totalInventoryVal+" VND");
-        System.out.println("Giá trung bình: " + Product.getAveragePrice()+" VND");
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("San pham can tim:");
-        String input = sc.nextLine();
-        boolean flag = false;
+    public static Product findName(Product[] products, String name) {
         for (Product p: products) {
-            if(p.getName().equals(input)) {
-                System.out.println("Tim thay san pham:");
-                p.display();
-                flag = true;
-                break;
+            if(p.getName().equals(name)) {
+                return p;
             }
         }
-        if (!flag) {
-            System.out.println("Khong tim thay san pham");
-        }
+        return null;
+    }
 
+    public static void million(Product[] products) {
         System.out.println("San pham co gia lon hon 1trieu la: ");
         boolean flag1 = false;
         for (Product p: products) {
@@ -46,15 +68,16 @@ public class Main {
         if (!flag1) {
             System.out.println("Khong co san pham lon hon 1trieu.");
         }
+    }
 
-        Product max=products[0];
-        for (Product p: products) {
-            if(p.getQuantity() > max.getQuantity()) {
+    public static Product checkMax(Product[] products) {
+        Product max = products[0];
+        for (Product p : products) {
+            if (p.getQuantity() > max.getQuantity()) {
                 max = p;
             }
         }
-        System.out.println("San pham co so luong ton kho lon nhat la: ");
-        max.display();
+        return max;
     }
 
 }
