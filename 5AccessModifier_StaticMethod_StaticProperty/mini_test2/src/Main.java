@@ -46,7 +46,7 @@ public class Main {
         if (!flag1) {
             System.out.println("Khong co san pham lon hon 1trieu.");
         }
-        
+
         Product max=products[0];
         for (Product p: products) {
             if(p.getQuantity() > max.getQuantity()) {
@@ -55,6 +55,6 @@ public class Main {
         }
         System.out.println("San pham co so luong ton kho lon nhat la: ");
         max.display();
-
     }
+
 }
