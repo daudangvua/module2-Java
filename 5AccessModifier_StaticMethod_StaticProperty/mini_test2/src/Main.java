@@ -8,30 +8,53 @@ public class Main {
         products[2] = new Product(03,"vở",9000,10);
         products[3] = new Product(04,"bàn",400000,5);
         products[4] = new Product(05,"ghế",230000,11);
-        Product.setStoreName("Kho miền Nam");
-
-        inAll(products);
-
-        printInventoryStats();
-
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("San pham can tim:");
-        String input = sc.nextLine();
-        Product result= findName(products, input);
-        if(result!=null){
-            System.out.println("San pham tim thay");
-            result.display();
-        }else {
-            System.out.println("Khong tim thay san pham.");
-        }
-
-        million(products);
-
-        Product maxQuantity = checkMax(products);
-        System.out.println("San pham co so luong ton kho lon nhat: ");
-        maxQuantity.display();
-
+        Product.setStoreName("Kho miền Nam");
+        int choice;
+        do {
+            System.out.println("\n--- MENU ---");
+            System.out.println("1. In tất cả sản phẩm");
+            System.out.println("2. Tìm sản phẩm theo tên");
+            System.out.println("3. In sản phẩm có giá > 1 triệu");
+            System.out.println("4. Sản phẩm có số lượng lớn nhất");
+            System.out.println("5. Thống kê kho");
+            System.out.println("0. Thoát");
+            System.out.print("Nhập lựa chọn: ");
+            choice = sc.nextInt();
+            sc.nextLine();
+            switch (choice) {
+                case 1:
+                    inAll(products);
+                    break;
+                case 2:
+                    System.out.print("Nhập tên sản phẩm cần tìm: ");
+                    String name = sc.nextLine();
+                    Product result = findName(products, name);
+                    if (result != null) {
+                        System.out.println("Sản phẩm tìm thấy:");
+                        result.display();
+                    } else {
+                        System.out.println("Không tìm thấy sản phẩm.");
+                    }
+                    break;
+                case 3:
+                    million(products);
+                    break;
+                case 4:
+                    Product maxQuantity = checkMax(products);
+                    System.out.println("San pham co so luong ton kho lon nhat: ");
+                    maxQuantity.display();
+                    break;
+                case 5:
+                    printInventoryStats();
+                    break;
+                case 0:
+                    System.out.println("Đã thoát chương trình.");
+                    break;
+                default:
+                    System.out.println("Lựa chọn không hợp lệ.");
+            }
+        }while (choice != 0);
     }
 
     public static void printInventoryStats() {
