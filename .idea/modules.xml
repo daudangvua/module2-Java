@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/0nhap/0nhap.iml" filepath="$PROJECT_DIR$/0nhap/0nhap.iml" />
       <module fileurl="file://$PROJECT_DIR$/3mang-va-phuong-thuc/3mang-va-phuong-thuc.iml" filepath="$PROJECT_DIR$/3mang-va-phuong-thuc/3mang-va-phuong-thuc.iml" />
       <module fileurl="file://$PROJECT_DIR$/4Lop-doi-tuong/4Lop-doi-tuong.iml" filepath="$PROJECT_DIR$/4Lop-doi-tuong/4Lop-doi-tuong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/5AccessModifier_StaticMethod_StaticProperty.iml" filepath="$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/5AccessModifier_StaticMethod_StaticProperty.iml" />
       <module fileurl="file://$PROJECT_DIR$/Module2_Java.iml" filepath="$PROJECT_DIR$/Module2_Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Operator-Expression/Operator-Expression.iml" filepath="$PROJECT_DIR$/Operator-Expression/Operator-Expression.iml" />
       <module fileurl="file://$PROJECT_DIR$/Variable-DataType/Variable-DataType.iml" filepath="$PROJECT_DIR$/Variable-DataType/Variable-DataType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/car/car.iml" filepath="$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/car/car.iml" />
       <module fileurl="file://$PROJECT_DIR$/chi-so-can-nang/chi-so-can-nang.iml" filepath="$PROJECT_DIR$/chi-so-can-nang/chi-so-can-nang.iml" />
       <module fileurl="file://$PROJECT_DIR$/3mang-va-phuong-thuc/dao-nguoc-phan-tu-mang/dao-nguoc-phan-tu-mang.iml" filepath="$PROJECT_DIR$/3mang-va-phuong-thuc/dao-nguoc-phan-tu-mang/dao-nguoc-phan-tu-mang.iml" />
       <module fileurl="file://$PROJECT_DIR$/3mang-va-phuong-thuc/dem-ky-tu-trong-chuoi/dem-ky-tu-trong-chuoi.iml" filepath="$PROJECT_DIR$/3mang-va-phuong-thuc/dem-ky-tu-trong-chuoi/dem-ky-tu-trong-chuoi.iml" />
@@ -26,6 +29,7 @@
       <module fileurl="file://$PROJECT_DIR$/4Lop-doi-tuong/phuong-trinh-bac-2/phuong-trinh-bac-2.iml" filepath="$PROJECT_DIR$/4Lop-doi-tuong/phuong-trinh-bac-2/phuong-trinh-bac-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/doc-so-thanh-chu/readnumbersintowords.iml" filepath="$PROJECT_DIR$/doc-so-thanh-chu/readnumbersintowords.iml" />
       <module fileurl="file://$PROJECT_DIR$/3mang-va-phuong-thuc/so-lon-nhat-trong-mang-hai-chieu/so-lon-nhat-trong-mang-hai-chieu.iml" filepath="$PROJECT_DIR$/3mang-va-phuong-thuc/so-lon-nhat-trong-mang-hai-chieu/so-lon-nhat-trong-mang-hai-chieu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/student/student.iml" filepath="$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/student/student.iml" />
       <module fileurl="file://$PROJECT_DIR$/3mang-va-phuong-thuc/them-phan-tu-vao-mang/them-phan-tu-vao-mang.iml" filepath="$PROJECT_DIR$/3mang-va-phuong-thuc/them-phan-tu-vao-mang/them-phan-tu-vao-mang.iml" />
       <module fileurl="file://$PROJECT_DIR$/3mang-va-phuong-thuc/tim-gia-tri-lon-nhat/tim-gia-tri-lon-nhat.iml" filepath="$PROJECT_DIR$/3mang-va-phuong-thuc/tim-gia-tri-lon-nhat/tim-gia-tri-lon-nhat.iml" />
       <module fileurl="file://$PROJECT_DIR$/3mang-va-phuong-thuc/tim-gia-tri-nho-nhat/tim-gia-tri-nho-nhat.iml" filepath="$PROJECT_DIR$/3mang-va-phuong-thuc/tim-gia-tri-nho-nhat/tim-gia-tri-nho-nhat.iml" />
