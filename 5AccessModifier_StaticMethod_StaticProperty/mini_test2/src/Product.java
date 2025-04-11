@@ -3,9 +3,9 @@ public class Product {
     private String name;
     private double price;
     private int quantity;
-    static String storeName ="Kho Tổng ABC";
-    static int totalProduct;
-    static double totalInventoryVal;
+    static String storeName="Kho Tổng ABC";
+    static int totalProduct=0;
+    static double totalInventoryVal=0;
     public Product(int id, String name, double price, int quantity) {
         this.id = id;
         this.name = name;
