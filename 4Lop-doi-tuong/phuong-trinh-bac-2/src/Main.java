@@ -10,6 +10,7 @@ public class Main {
         double b = sc.nextDouble();
         System.out.println("Nhập c: ");
         double c = sc.nextDouble();
+
         QuadraticEquation quadraticEquation = new QuadraticEquation(a, b, c);
         System.out.println("a: "+quadraticEquation.getA());
         System.out.println("b: "+quadraticEquation.getB());
