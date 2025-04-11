@@ -3,7 +3,7 @@ public class Product {
     private String name;
     private double price;
     private int quantity;
-    static String storeName;
+    static String storeName ="Kho Tổng ABC";
     static int totalProduct;
     static double totalInventoryVal;
     public Product(int id, String name, double price, int quantity) {
@@ -29,6 +29,15 @@ public class Product {
     }
     static void setStoreName(String name) {
         storeName = name;
+    }
+    public String getName() {
+        return name;
+    }
+    public double getPrice() {
+        return price;
+    }
+    public int getQuantity() {
+        return quantity;
     }
     public void display() {
         System.out.println("mã: "+id);
