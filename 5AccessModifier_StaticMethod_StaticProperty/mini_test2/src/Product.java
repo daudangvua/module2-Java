@@ -49,7 +49,5 @@ public class Product {
         System.out.println("Giá: "+price+" VND");
         System.out.println("Số lượng: "+quantity);
         System.out.println("kho hàng: "+storeName);
-//        System.out.println("totalProduct: "+totalProduct);
-//        System.out.println("totalInventoryVal: "+totalInventoryVal+" VND");
     }
 }
