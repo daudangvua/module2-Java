@@ -20,7 +20,7 @@ public class Main {
         String input = sc.nextLine();
         Product result= findName(products, input);
         if(result!=null){
-            System.out.println("San pham tim thay:");
+            System.out.println("San pham tim thay");
             result.display();
         }else {
             System.out.println("Khong tim thay san pham.");
@@ -67,7 +67,7 @@ public class Main {
         }
         if (!flag1) {
             System.out.println("Khong co san pham lon hon 1trieu.");
-        }
+        }System.out.println();
     }
 
     public static Product checkMax(Product[] products) {
