@@ -22,6 +22,7 @@ public class ProgrammingBook extends Book {
     public void setFramework(String framework) {
         this.framework = framework;
     }
+    @Override
     public double getPrice() {
         return super.getPrice()*0.95;
     }

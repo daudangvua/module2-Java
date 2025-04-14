@@ -11,6 +11,7 @@ public class FictionBook extends Book {
     public void setCategory(String category) {
         this.category = category;
     }
+    @Override
     public double getPrice() {
         return super.getPrice()*0.93;
     }
