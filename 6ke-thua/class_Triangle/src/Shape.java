@@ -13,6 +13,7 @@ public class Shape {
     }
     @Override
     public String toString() {
-        return "Color: " + color;
+        return "Hình có:"
+                +"\nMầu: " + color+"\n";
     }
 }
