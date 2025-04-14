@@ -1,7 +1,17 @@
 public class Shape {
     private String color;
-    public Shape(String color) {
+    private String name;
+    public Shape(String color, String name) {
         this.color = color;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getColor() {
@@ -13,7 +23,8 @@ public class Shape {
     }
     @Override
     public String toString() {
-        return "Hình có:"
-                +"\nMầu: " + color+"\n";
+        return "Name: " + getName()
+                +"\nMầu: " + getColor()+"\n";
+
     }
 }

@@ -1,12 +1,14 @@
+import javax.xml.namespace.QName;
+
 public class Triangle extends Shape {
     private double side1=1;
     private double side2=1;
     private double side3=1;
-    public Triangle(String color) {
-        super(color);
+    public Triangle(String color,String name) {
+        super(color, name);
     }
-    public Triangle(double side1, double side2, double side3,String color) {
-        super(color);
+    public Triangle(double side1, double side2, double side3,String color, String name) {
+        super(color,name);
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
@@ -44,8 +46,8 @@ public class Triangle extends Shape {
     }
     @Override
     public String toString() {
-        return "Tam giác có:\n"
-                +"Cạnh a: "+getSide1()
+        return "Name: " +getName()
+                +"\nCạnh a: "+getSide1()
                 +"\nCạnh b: "+getSide2()
                 +"\nCạnh c: "+getSide3()
                 +"\nDiện tích: "+String.format("%.3f", getArea())
