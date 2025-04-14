@@ -50,6 +50,8 @@ public class Test {
                 case 0:
                     System.out.println("Đã thoát chương trình.");
                     break;
+                default:
+                    System.out.println("Lựa chọn không hợp lệ.");
             }
         } while (choice != 0);
     }
