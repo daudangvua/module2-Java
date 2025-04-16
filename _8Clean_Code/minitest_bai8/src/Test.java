@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Manage {
+public class Test {
     public static void main(String[] args) {
         Material[] material = new Material[10];
         material[0] = new CrispyFlour("cr1", "giòn", LocalDate.of(2024,10,1), 11000, 10);
