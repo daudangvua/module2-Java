@@ -8,11 +8,13 @@
       <module fileurl="file://$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/5AccessModifier_StaticMethod_StaticProperty.iml" filepath="$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/5AccessModifier_StaticMethod_StaticProperty.iml" />
       <module fileurl="file://$PROJECT_DIR$/6ke-thua/6ke-thua.iml" filepath="$PROJECT_DIR$/6ke-thua/6ke-thua.iml" />
       <module fileurl="file://$PROJECT_DIR$/7_AbstractClass_Interface/7_AbstractClass_Interface.iml" filepath="$PROJECT_DIR$/7_AbstractClass_Interface/7_AbstractClass_Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_8Clean_Code/Doi_ten_bien_tach_hang/Doi_ten_bien_tach_hang.iml" filepath="$PROJECT_DIR$/_8Clean_Code/Doi_ten_bien_tach_hang/Doi_ten_bien_tach_hang.iml" />
       <module fileurl="file://$PROJECT_DIR$/Module2_Java.iml" filepath="$PROJECT_DIR$/Module2_Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/Operator-Expression/Operator-Expression.iml" filepath="$PROJECT_DIR$/Operator-Expression/Operator-Expression.iml" />
       <module fileurl="file://$PROJECT_DIR$/6ke-thua/Point2D_Point3D/Point2D_Point3D.iml" filepath="$PROJECT_DIR$/6ke-thua/Point2D_Point3D/Point2D_Point3D.iml" />
       <module fileurl="file://$PROJECT_DIR$/6ke-thua/Point_MoveablePoint/Point_MoveablePoint.iml" filepath="$PROJECT_DIR$/6ke-thua/Point_MoveablePoint/Point_MoveablePoint.iml" />
       <module fileurl="file://$PROJECT_DIR$/Variable-DataType/Variable-DataType.iml" filepath="$PROJECT_DIR$/Variable-DataType/Variable-DataType.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_8Clean_Code/_8Clean_Code.iml" filepath="$PROJECT_DIR$/_8Clean_Code/_8Clean_Code.iml" />
       <module fileurl="file://$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/bt_moi/account/account.iml" filepath="$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/bt_moi/account/account.iml" />
       <module fileurl="file://$PROJECT_DIR$/7_AbstractClass_Interface/animal_InterfaceEdible/animal_InterfaceEdible.iml" filepath="$PROJECT_DIR$/7_AbstractClass_Interface/animal_InterfaceEdible/animal_InterfaceEdible.iml" />
       <module fileurl="file://$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/bt_moi/bt_moi.iml" filepath="$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/bt_moi/bt_moi.iml" />
@@ -43,6 +45,7 @@
       <module fileurl="file://$PROJECT_DIR$/6ke-thua/mini_test/mini_test.iml" filepath="$PROJECT_DIR$/6ke-thua/mini_test/mini_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/mini_test2/mini_test2.iml" filepath="$PROJECT_DIR$/5AccessModifier_StaticMethod_StaticProperty/mini_test2/mini_test2.iml" />
       <module fileurl="file://$PROJECT_DIR$/7_AbstractClass_Interface/minitest/minitest.iml" filepath="$PROJECT_DIR$/7_AbstractClass_Interface/minitest/minitest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_8Clean_Code/minitest_bai8/minitest_bai8.iml" filepath="$PROJECT_DIR$/_8Clean_Code/minitest_bai8/minitest_bai8.iml" />
       <module fileurl="file://$PROJECT_DIR$/ngay-trong-thang/ngay-trong-thang.iml" filepath="$PROJECT_DIR$/ngay-trong-thang/ngay-trong-thang.iml" />
       <module fileurl="file://$PROJECT_DIR$/4Lop-doi-tuong/phuong-trinh-bac-2/phuong-trinh-bac-2.iml" filepath="$PROJECT_DIR$/4Lop-doi-tuong/phuong-trinh-bac-2/phuong-trinh-bac-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/doc-so-thanh-chu/readnumbersintowords.iml" filepath="$PROJECT_DIR$/doc-so-thanh-chu/readnumbersintowords.iml" />
