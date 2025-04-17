@@ -183,14 +183,14 @@ public class Test {
                     String qtyStr = scanner.nextLine();
                     if (!qtyStr.isEmpty()) {
                         int qty = Integer.parseInt(qtyStr);
-                        ((CrispyFlour) m).setQuantity(qty);
+                        ((CrispyFlour)m).setQuantity(qty);
                     }
                 }else if (m instanceof Meat) {
                     System.out.println("weight(Enter để giữ nguyên): ");
                     String weightStr = scanner.nextLine();
                     if (!weightStr.isEmpty()) {
                         int weight = Integer.parseInt(weightStr);
-                        ((Meat) m).setWeight(weight);
+                        ((Meat)m).setWeight(weight);
                     }
                 }
                 System.out.println("Đã sửa: ");
