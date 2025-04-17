@@ -10,10 +10,10 @@ public class Test {
         material[3] = new CrispyFlour("cr4", "ngon", LocalDate.of(2024, 4, 23), 10000, 12);
         material[4] = new CrispyFlour("cr5", "king", LocalDate.of(2024, 11, 1), 22000, 6);
         material[5] = new Meat("m1","pig",LocalDate.of(2025, 4, 14),70000,500 );
-        material[6] = new Meat("m1","chicken",LocalDate.of(2025, 4, 15),60000, 300);
-        material[7] = new Meat("m1","cow",LocalDate.of(2025, 4, 13),90000, 200);
-        material[8] = new Meat("m1","dog",LocalDate.of(2025, 4, 12),1000000, 250);
-        material[9] = new Meat("m1","goat",LocalDate.of(2025, 4, 11),77000, 600);
+        material[6] = new Meat("m2","chicken",LocalDate.of(2025, 4, 15),60000, 300);
+        material[7] = new Meat("m3","cow",LocalDate.of(2025, 4, 13),90000, 200);
+        material[8] = new Meat("m4","dog",LocalDate.of(2025, 4, 12),1000000, 250);
+        material[9] = new Meat("m5","goat",LocalDate.of(2025, 4, 11),77000, 600);
         Scanner scanner = new Scanner(System.in);
         int choice;
         do {
