@@ -201,14 +201,19 @@ public class Test {
     }
     public static Material[] deleteMaterial(Material[] material,Scanner scanner) {
         scanner.nextLine();
-        System.out.println("\nNhập ID muốn xóa:");
+        System.out.println("\nNhập id muốn xóa:");
         String id = scanner.nextLine();
+        boolean found = false;
         for (int i = 0; i < material.length; i++) {
-            if (material[i] != null&&material[i].getId().equals(id)) {
-                material[i]=null;
-                System.out.println("Đã xóa");
+            if (material[i] != null && material[i].getId().equals(id)) {
+                material[i] = null;
+                System.out.println("Đã xóa sản phẩm có id: "+id);
+                found = true;
                 break;
             }
+        }
+        if (!found) {
+            System.out.println("Không tìm thấy id muốn xóa.");
         }
         return material;
     }
