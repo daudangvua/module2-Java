@@ -36,7 +36,7 @@ public class Test {
                     updateMaterial(material, scanner);
                     break;
                 case 4:
-                    material =deleteMaterial(material,scanner);
+                    material=deleteMaterial(material,scanner);
                     break;
                 case 5:
                     calculateDiscountDifference(material);
