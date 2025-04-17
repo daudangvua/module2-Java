@@ -10,8 +10,4 @@ public class NextDayCalculator {
     public LocalDate getNextDay() {
         return date.plusDays(1);
     }
-    @Override
-    public String toString() {
-        return date.toString();
-    }
 }

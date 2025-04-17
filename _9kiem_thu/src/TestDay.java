@@ -8,7 +8,7 @@ public class TestDay {
     @DisplayName("Testing")
     void testAdd() {
         NextDayCalculator calculator = new NextDayCalculator(LocalDate.of(2018,1,1));
-        calculator.toString();
+        calculator.getNextDay();
     }
 
 
