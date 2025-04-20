@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Test {
 
-    public static final int MOTORBIKE = 1;
-    public static final int CAR = 2;
+    private static final int MOTORBIKE = 1;
+    private static final int CAR = 2;
 
     public static void main(String[] args) {
         VehicleManager manager = new VehicleManager();
@@ -26,29 +26,7 @@ public class Test {
 
             switch (choice) {
                 case 1:
-                    System.out.print("Nhập loại phương tiện (1. Xe hơi | 2. Xe máy): ");
-                    int type = Integer.parseInt(sc.nextLine());
-
-                    System.out.print("Nhập mã xe: ");
-                    String id = sc.nextLine();
-                    System.out.print("Nhập hãng xe: ");
-                    String brand = sc.nextLine();
-                    System.out.print("Nhập năm sản xuất: ");
-                    int year = Integer.parseInt(sc.nextLine());
-
-                    if (type == MOTORBIKE) {
-                        System.out.print("Nhập số chỗ ngồi: ");
-                        int seats = Integer.parseInt(sc.nextLine());
-                        Vehicle car = new Car(id, brand, year, seats);
-                        manager.addVehicle(car);
-                    } else if (type == CAR) {
-                        System.out.print("Nhập công suất động cơ: ");
-                        int power = Integer.parseInt(sc.nextLine());
-                        Vehicle bike = new Motorbike(id, brand, year, power);
-                        manager.addVehicle(bike);
-                    } else {
-                        System.out.println("Loại không hợp lệ.");
-                    }
+                    handleAddVehicle(sc, manager);
                     break;
 
                 case 2:
@@ -95,5 +73,30 @@ public class Test {
         } while (choice != 0);
 
         sc.close();
+    }
+    public static void handleAddVehicle(Scanner sc, VehicleManager manager) {
+        System.out.print("Nhập loại phương tiện (1. Xe hơi | 2. Xe máy): ");
+        int type = Integer.parseInt(sc.nextLine());
+
+        System.out.print("Nhập mã xe: ");
+        String id = sc.nextLine();
+        System.out.print("Nhập hãng xe: ");
+        String brand = sc.nextLine();
+        System.out.print("Nhập năm sản xuất: ");
+        int year = Integer.parseInt(sc.nextLine());
+
+        if (type == CAR) {
+            System.out.print("Nhập số chỗ ngồi: ");
+            int seats = Integer.parseInt(sc.nextLine());
+            Vehicle car = new Car(id, brand, year, seats);
+            manager.addVehicle(car);
+        } else if (type == MOTORBIKE) {
+            System.out.print("Nhập công suất động cơ: ");
+            int power = Integer.parseInt(sc.nextLine());
+            Vehicle bike = new Motorbike(id, brand, year, power);
+            manager.addVehicle(bike);
+        } else {
+            System.out.println("Loại không hợp lệ.");
+        }
     }
 }
