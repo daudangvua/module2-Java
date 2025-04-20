@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class Test {
+
+    public static final int MOTORBIKE = 1;
+    public static final int CAR = 2;
+
     public static void main(String[] args) {
         VehicleManager manager = new VehicleManager();
         Scanner sc = new Scanner(System.in);
@@ -32,12 +36,12 @@ public class Test {
                     System.out.print("Nhập năm sản xuất: ");
                     int year = Integer.parseInt(sc.nextLine());
 
-                    if (type == 1) {
+                    if (type == MOTORBIKE) {
                         System.out.print("Nhập số chỗ ngồi: ");
                         int seats = Integer.parseInt(sc.nextLine());
                         Vehicle car = new Car(id, brand, year, seats);
                         manager.addVehicle(car);
-                    } else if (type == 2) {
+                    } else if (type == CAR) {
                         System.out.print("Nhập công suất động cơ: ");
                         int power = Integer.parseInt(sc.nextLine());
                         Vehicle bike = new Motorbike(id, brand, year, power);
