@@ -1,120 +1,96 @@
 public class MyLinkedList<E> {
     private Node head;
-    private int numNodes;
-    public MyLinkedList() {}
-    private class Node {
-        private Node next;
-        private Object data;
-        public Node(Object data) {
-            this.data = data;
-        }
-        public Object getData() {
-            return this.data;
-        }
+    private int numNodes = 0;
+
+    public MyLinkedList() {
+        head = null;
     }
-    public void add(int index, E element) {
-        Node temp = head;
-        Node holder;
-        for (int i = 0; i < index-1 && temp.next != null; i++) {
-            temp = temp.next;
-        }
-        holder = temp.next;
-        temp.next = new Node(element);
-        temp.next.next = holder;
-        numNodes++;
-    }
+
     public void addFirst(E element) {
-        Node temp = head;
-        head = new Node(element);
-        head.next = temp;
+        Node temp = new Node(element);
+        temp.setNext(head);
+        head = temp;
         numNodes++;
     }
+
     public void addLast(E element) {
-        Node newNode = new Node(element);
+        Node temp = new Node(element);
         if (head == null) {
-            head = newNode;
+            head = temp;
         } else {
-            Node temp = head;
-            while (temp.next != null) {
-                temp = temp.next;
+            Node current = head;
+            while (current.getNext() != null) {
+                current = current.getNext();
             }
-            temp.next = newNode;
+            current.setNext(temp);
         }
         numNodes++;
     }
-    public E remove(int index) {
-        if (index < 0 || index >= numNodes) {
-            throw new IndexOutOfBoundsException("Index out of bounds");
+
+    public void add(int index, E element) {
+        if (index < 0 || index > numNodes) {
+            throw new IndexOutOfBoundsException("Index: " + index);
         }
+
+        if (index == 0) {
+            addFirst(element);
+            return;
+        }
+
         Node temp = head;
-        E removedData;
-        if(index == 0) {
-            removedData = (E) head.data;
-            head = head.next;
-        } else {
-            for (int i = 0; i < index-1; i++) {
-                temp = temp.next;
-            }
-            Node nodeToRemove = temp.next;
-            removedData = (E) nodeToRemove.data;
-            temp.next = nodeToRemove.next;
+        for (int i = 0; i < index - 1; i++) {
+            temp = temp.getNext();
         }
-        numNodes--;
-        return removedData;
+
+        Node newNode = new Node(element);
+        newNode.setNext(temp.getNext());
+        temp.setNext(newNode);
+        numNodes++;
     }
-    public boolean remove(Object e) {
-        if (e == null) {
-            return false;
+
+    public E get(int index) {
+        if (index < 0 || index >= numNodes) {
+            throw new IndexOutOfBoundsException("Index: " + index);
         }
-        if (head.data.equals(e)) {
-            head = head.next;
-            numNodes--;
-            return true;
+
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.getNext();
         }
-        Node current = head;
-        while (current.next != null) {
-            if (current.next.data.equals(e)) {
-                current.next = current.next.next;
-                numNodes--;
-                return true;
-            }
-            current = current.next;
-        }
-        return false;
+
+        return (E) temp.getData();
     }
+
     public int size() {
         return numNodes;
     }
-    public MyLinkedList<E> clone(){
-        MyLinkedList<E> clonedList = new MyLinkedList<>();
-        Node current = this.head;
-        while (current != null) {
-            clonedList.addLast((E)current.data);
-            current = current.next;
-        }
-        return clonedList;
+
+    public void clear() {
+        head = null;
+        numNodes = 0;
     }
-    public boolean contains(E o) {
-        Node current = head;
-        while (current != null) {
-            if (current.data.equals(o)) {
+
+    public boolean contains(E element) {
+        Node temp = head;
+        while (temp != null) {
+            if (temp.getData().equals(element)) {
                 return true;
             }
-            current = current.next;
+            temp = temp.getNext();
         }
         return false;
     }
-    public int indexOf(E o){
-        Node current = head;
-        int index =0;
-        while (current != null) {
-            if (current.data.equals(o)) {
+
+    public int indexOf(E element) {
+        Node temp = head;
+        int index = 0;
+        while (temp != null) {
+            if (temp.getData().equals(element)) {
                 return index;
             }
-            current = current.next;
+            temp = temp.getNext();
             index++;
         }
         return -1;
     }
-
 }
