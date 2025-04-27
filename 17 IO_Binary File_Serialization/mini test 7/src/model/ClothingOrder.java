@@ -36,6 +36,7 @@ public class ClothingOrder extends Order {
 
     @Override
     public void displayInfo() {
+        System.out.println(toString());
     }
 
     @Override
@@ -44,9 +45,11 @@ public class ClothingOrder extends Order {
     }
     @Override
     public String toString() {
-        return "model.ClothingOrder{" +
-                "basePrice=" + getBasePrice() +
-                ", size='" + getSize() + '\'' +
-                '}';
+        return "Đơn hàng quần áo:" +
+                "\nMã: " + getOrderId() +
+                "\nTên khách hàng: " + getCustomerName() +
+                "\nNgày đặt hàng: " + getOrderDate() +
+                "\nGiá: " + calculateTotalPrice() +
+                "\nsize: " + getSize();
     }
 }

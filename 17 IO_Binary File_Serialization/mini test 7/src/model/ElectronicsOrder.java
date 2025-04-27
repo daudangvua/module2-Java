@@ -36,6 +36,7 @@ public class ElectronicsOrder extends Order {
 
     @Override
     public void displayInfo() {
+        System.out.println(toString());
     }
 
     @Override
@@ -44,9 +45,11 @@ public class ElectronicsOrder extends Order {
     }
     @Override
     public String toString() {
-        return "model.ElectronicsOrder{" +
-                "itemPrice=" + getItemPrice() +
-                ", warrantyMonths=" + getWarrantyMonths() +
-                '}';
+        return "Đơn hàng điện tử:" +
+                "\nMã: " + getOrderId() +
+                "\nTên khách hàng: " + getCustomerName() +
+                "\nNgày đặt hàng: " + getOrderDate() +
+                "\nGiá: " + calculateTotalPrice() +
+                "\nTháng bảo hành: " + getWarrantyMonths();
     }
 }

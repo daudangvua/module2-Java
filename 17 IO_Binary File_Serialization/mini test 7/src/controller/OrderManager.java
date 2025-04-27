@@ -1,5 +1,7 @@
 package controller;
 import model.Order;
+import storage.OrderStorage;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -12,26 +14,28 @@ public class OrderManager {
     }
     public void addOrder(Order o) {
         orders.add(o);
-        history.add(o.toString());
+        history.add("Đã thêm đơn hàng có mã "+o.getOrderId()+".");
     }
     public void removeOrder(String orderID) {
         boolean removed = false;
         for (int i=0 ; i<orders.size(); i++) {
             if (orders.get(i).getOrderId().equals(orderID)) {
                 orders.remove(i);
-                history.add(orderID + " is removed.");
+                history.add("Đã xóa đơn hàng có mã "+orderID + ".");
+                System.out.println("Đã xóa đơn hàng có mã "+orderID + ".");
                 removed = true;
                 break;
             }
         }
         if (!removed) {
-            history.add(orderID + " is not found.");
+            history.add("Cố gắng xóa mã "+ orderID + " không tồn tại.");
+            System.out.println("Mã "+orderID+" Không tồn tại.");
         }
     }
     public void displayAllOrders(){
         System.out.println("Tất cả các đơn đặt hàng:");
         if (orders.isEmpty()) {
-            System.out.println("No orders to display.");
+            System.out.println("Không có đơn hàng nào để hiển thị.");
         } else {
             for (Order order : orders) {
                 order.displayInfo();
@@ -41,11 +45,22 @@ public class OrderManager {
         history.add("Xem tất cả đơn đặt hàng.");
     }
     public void displayRevenueReport(){
-        System.out.println("Báo cáo doanh thu:");
-        for (Order order : orders) {
-            System.out.println(order.calculateTotalPrice());
+        System.out.println("==== BÁO CÁO DOANH THU ====");
+        double totalRevenue = 0;
+        if (orders.isEmpty()) {
+            System.out.println("Không có đơn hàng nào để tính doanh thu.");
+        }else {
+            for (Order order : orders) {
+                double price = order.calculateTotalPrice();
+                System.out.println("Khách hàng: " + order.getCustomerName() +
+                        " | Mã đơn: " + order.getOrderId() +
+                        " | Tổng tiền: " + price + " VND");
+                totalRevenue += price;
+            }
+            System.out.println("---------------------------");
+            System.out.println("TỔNG DOANH THU: " + totalRevenue + " VND");
         }
-        history.add("Xem báo cáo thuế.");
+        history.add("Xem báo cáo hoanh thu.");
     }
     public void sortByOrderDate(){
         orders.sort(null);
@@ -60,10 +75,12 @@ public class OrderManager {
         history.add("Sắp xếp đơn hàng theo giá.");
     }
     public void printHistory(){
-        System.out.println("Lịch sử thao tác:");
+        System.out.println("==== LỊCH SỬ THAO TÁC ====");
         for (String s : history) {
             System.out.println(s);
         }
-
+    }
+    public ArrayList<Order> getOrders() {
+        return orders;
     }
 }
