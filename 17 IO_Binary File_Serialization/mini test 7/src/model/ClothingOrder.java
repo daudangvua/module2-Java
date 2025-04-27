@@ -40,13 +40,13 @@ public class ClothingOrder extends Order {
 
     @Override
     public double calculateTotalPrice() {
-        return (size.equals("L") || size.equals("XL")) ? basePrice+(basePrice * 0.1) : basePrice;
+        return (getSize().equals("L") || getSize().equals("XL")) ? getBasePrice()+(getBasePrice() * 0.1) : getBasePrice();
     }
     @Override
     public String toString() {
         return "model.ClothingOrder{" +
-                "basePrice=" + basePrice +
-                ", size='" + size + '\'' +
+                "basePrice=" + getBasePrice() +
+                ", size='" + getSize() + '\'' +
                 '}';
     }
 }
