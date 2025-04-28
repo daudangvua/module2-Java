@@ -105,11 +105,17 @@ public class Main {
             scanner.nextLine();
             System.out.print("Size (S/M/L/XL): ");
             String size = scanner.nextLine();
+            if (!isValidSize(size)) {
+                throw new IllegalArgumentException("Kích cỡ không hợp lệ (phải là S, M, L, hoặc XL)");
+            }
             ClothingOrder co = new ClothingOrder(orderId, customerName, orderDate, basePrice, size);
             orderManager.addOrder(co);
         } else {
             System.out.println("Lựa chọn không hợp lệ!");
         }
+    }
+    public static boolean isValidSize(String size) {
+        return size != null && (size.equals("S") || size.equals("M") || size.equals("L") || size.equals("XL"));
     }
 
 
