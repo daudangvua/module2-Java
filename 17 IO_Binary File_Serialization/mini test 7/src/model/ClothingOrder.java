@@ -32,7 +32,7 @@ public class ClothingOrder extends Order {
 
     public void setSize(String size) {
         if (!isValidSize(size)) {
-            throw new IllegalArgumentException("Invalid size (must be S, M, L, or XL)");
+            throw new IllegalArgumentException("Kích cỡ không hợp lệ (phải là S, M, L, hoặc XL)");
         }
         this.size = size;
     }
