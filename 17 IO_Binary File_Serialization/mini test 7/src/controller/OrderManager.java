@@ -84,5 +84,22 @@ public class OrderManager {
         history.add("Lưu vào file nhị phân.");
         return orders;
     }
+    public void loadOrders() {
+        OrderStorage storage = new OrderStorage();
+        ArrayList<Order> loadedOrders = storage.loadOrders();
+
+        if (loadedOrders.isEmpty()) {
+            System.out.println("Không có đơn hàng nào được tải từ file.");
+            history.add("Tải danh sách đơn hàng thất bại hoặc file trống.");
+        } else {
+            this.orders = loadedOrders;
+            System.out.println("Đã tải " + orders.size() + " đơn hàng từ file.");
+            for (Order order : loadedOrders) {
+                order.displayInfo();  // Hiển thị thông tin đơn hàng
+                System.out.println("---------------------------");
+            }
+            history.add("Tải danh sách đơn hàng từ file thành công.");
+        }
+    }
 
 }

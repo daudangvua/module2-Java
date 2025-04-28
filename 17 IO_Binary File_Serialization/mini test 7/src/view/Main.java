@@ -66,16 +66,7 @@ public class Main {
                     OrderStorage.saveOrder(orderManager.getOrders());
                     break;
                 case 10:
-                    ArrayList<Order> loadedOrders = OrderStorage.loadOrders();
-                    if (loadedOrders.isEmpty()) {
-                        System.out.println("Không có đơn hàng nào được tải.");
-                    } else {
-                        System.out.println("Đã tải " + loadedOrders.size() + " đơn hàng từ file.");
-                        for (Order order : loadedOrders) {
-                            order.displayInfo();  // Hiển thị thông tin đơn hàng
-                            System.out.println("---------------------------");
-                        }
-                    }
+                    orderManager.loadOrders();
                     break;
             }
         }while (choice !=0);
