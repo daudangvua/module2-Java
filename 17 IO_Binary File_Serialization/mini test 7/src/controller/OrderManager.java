@@ -81,6 +81,8 @@ public class OrderManager {
         }
     }
     public ArrayList<Order> getOrders() {
+        history.add("Lưu vào file nhị phân.");
         return orders;
     }
+
 }
