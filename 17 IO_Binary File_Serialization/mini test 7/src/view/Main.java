@@ -73,6 +73,21 @@ public class Main {
         scanner.close();
     }
     public static void addNewOder() {
+        int type = chooseOrderType();
+        String orderId = inputOrderId();
+        String customerName = inputCustomerName();
+        int orderDate = inputOrderDate();
+
+        if (type == 1) {
+            ElectronicsOrder eo = createElectronicsOrder(orderId, customerName, orderDate);
+            orderManager.addOrder(eo);
+        } else {
+            ClothingOrder co = createClothingOrder(orderId, customerName, orderDate);
+            orderManager.addOrder(co);
+        }
+    }
+
+    public static int chooseOrderType() {
         int type;
         while (true) {
             System.out.println("Bạn muốn thêm đơn hàng nào:");
@@ -82,88 +97,96 @@ public class Main {
             if (scanner.hasNextInt()) {
                 type = scanner.nextInt();
                 scanner.nextLine(); // clear buffer
-                if (type == 1 || type == 2) break;
+                if (type == 1 || type == 2) return type;
             } else {
-                scanner.nextLine(); // clear invalid input
+                scanner.nextLine();
             }
             System.out.println("Lựa chọn không hợp lệ. Vui lòng nhập 1 hoặc 2.");
         }
+    }
 
+    public static String inputOrderId() {
         String orderId;
         do {
             System.out.print("Mã đơn hàng: ");
             orderId = scanner.nextLine().trim();
         } while (orderId.isEmpty());
+        return orderId;
+    }
 
-        String customerName;
+    public static String inputCustomerName() {
+        String name;
         do {
             System.out.print("Tên khách hàng: ");
-            customerName = scanner.nextLine().trim();
-        } while (customerName.isEmpty());
+            name = scanner.nextLine().trim();
+        } while (name.isEmpty());
+        return name;
+    }
 
-        int orderDate = 0;
+    public static int inputOrderDate() {
+        int date;
         while (true) {
             System.out.print("Ngày đặt hàng (yyyyMMdd): ");
             if (scanner.hasNextInt()) {
-                orderDate = scanner.nextInt();
-                if (String.valueOf(orderDate).length() == 8) break;
+                date = scanner.nextInt();
+                if (String.valueOf(date).length() == 8) return date;
             }
-            scanner.nextLine(); // clear
-            System.out.println("Ngày không hợp lệ. Vui lòng nhập theo định dạng yyyyMMdd.");
+            scanner.nextLine();
+            System.out.println("Ngày không hợp lệ. Nhập lại theo định dạng yyyyMMdd.");
+        }
+    }
+
+    public static ElectronicsOrder createElectronicsOrder(String orderId, String customerName, int orderDate) {
+        double itemPrice = -1;
+        while (itemPrice < 0) {
+            System.out.print("Giá sản phẩm: ");
+            if (scanner.hasNextDouble()) {
+                itemPrice = scanner.nextDouble();
+                if (itemPrice < 0) System.out.println("Giá không được âm.");
+            } else {
+                scanner.next();
+                System.out.println("Giá không hợp lệ.");
+            }
         }
 
-        if (type == 1) {
-            double itemPrice = -1;
-            while (itemPrice < 0) {
-                System.out.print("Giá sản phẩm: ");
-                if (scanner.hasNextDouble()) {
-                    itemPrice = scanner.nextDouble();
-                    if (itemPrice < 0) System.out.println("Giá không được âm.");
-                } else {
-                    scanner.next(); // bỏ dữ liệu không hợp lệ
-                    System.out.println("Giá không hợp lệ.");
-                }
+        int warrantyMonths = -1;
+        while (warrantyMonths < 0) {
+            System.out.print("Số tháng bảo hành: ");
+            if (scanner.hasNextInt()) {
+                warrantyMonths = scanner.nextInt();
+                if (warrantyMonths < 0) System.out.println("Số tháng không được âm.");
+            } else {
+                scanner.next();
+                System.out.println("Dữ liệu không hợp lệ.");
             }
-
-            int warrantyMonths = -1;
-            while (warrantyMonths < 0) {
-                System.out.print("Số tháng bảo hành: ");
-                if (scanner.hasNextInt()) {
-                    warrantyMonths = scanner.nextInt();
-                    if (warrantyMonths < 0) System.out.println("Số tháng không được âm.");
-                } else {
-                    scanner.next();
-                    System.out.println("Giá trị không hợp lệ.");
-                }
-            }
-
-            ElectronicsOrder eo = new ElectronicsOrder(orderId, customerName, orderDate, itemPrice, warrantyMonths);
-            orderManager.addOrder(eo);
-        } else {
-            double basePrice = -1;
-            while (basePrice < 0) {
-                System.out.print("Giá cơ bản: ");
-                if (scanner.hasNextDouble()) {
-                    basePrice = scanner.nextDouble();
-                    if (basePrice < 0) System.out.println("Giá không được âm.");
-                } else {
-                    scanner.next();
-                    System.out.println("Giá không hợp lệ.");
-                }
-            }
-            scanner.nextLine(); // clear buffer
-
-            String size;
-            while (true) {
-                System.out.print("Size (S/M/L/XL): ");
-                size = scanner.nextLine().trim().toUpperCase();
-                if (isValidSize(size)) break;
-                System.out.println("Kích cỡ không hợp lệ. Vui lòng nhập S, M, L hoặc XL.");
-            }
-
-            ClothingOrder co = new ClothingOrder(orderId, customerName, orderDate, basePrice, size);
-            orderManager.addOrder(co);
         }
+
+        return new ElectronicsOrder(orderId, customerName, orderDate, itemPrice, warrantyMonths);
+    }
+
+    public static ClothingOrder createClothingOrder(String orderId, String customerName, int orderDate) {
+        double basePrice = -1;
+        while (basePrice < 0) {
+            System.out.print("Giá cơ bản: ");
+            if (scanner.hasNextDouble()) {
+                basePrice = scanner.nextDouble();
+                if (basePrice < 0) System.out.println("Giá không được âm.");
+            } else {
+                scanner.next();
+                System.out.println("Giá không hợp lệ.");
+            }
+        }
+        scanner.nextLine(); // clear buffer
+
+        String size;
+        while (true) {
+            System.out.print("Size (S/M/L/XL): ");
+            size = scanner.nextLine().trim().toUpperCase();
+            if (isValidSize(size)) break;
+            System.out.println("Kích cỡ không hợp lệ.");
+        }
+
+        return new ClothingOrder(orderId, customerName, orderDate, basePrice, size);
     }
 
     public static boolean isValidSize(String size) {
