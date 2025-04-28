@@ -31,7 +31,13 @@ public class ClothingOrder extends Order {
     }
 
     public void setSize(String size) {
+        if (!isValidSize(size)) {
+            throw new IllegalArgumentException("Invalid size (must be S, M, L, or XL)");
+        }
         this.size = size;
+    }
+    private boolean isValidSize(String size) {
+        return size != null && (size.equals("S") || size.equals("M") || size.equals("L") || size.equals("XL"));
     }
 
     @Override

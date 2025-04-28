@@ -1,16 +1,15 @@
 package model;
 import java.io.Serializable;
-import java.time.LocalDate;
 
 public abstract class Order implements Payable, Comparable<Order>, Serializable {
     private String orderId;
     private String customerName;
-    private LocalDate orderDate;
+    private int orderDate;
 
     public Order() {
     }
 
-    public Order(String orderId, String customerName, LocalDate orderDate) {
+    public Order(String orderId, String customerName, int orderDate) {
         this.orderId = orderId;
         this.customerName = customerName;
         this.orderDate = orderDate;
@@ -32,18 +31,18 @@ public abstract class Order implements Payable, Comparable<Order>, Serializable 
         this.customerName = customerName;
     }
 
-    public LocalDate getOrderDate() {
+    public int getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(LocalDate orderDate) {
+    public void setOrderDate(int orderDate) {
         this.orderDate = orderDate;
     }
     public abstract void displayInfo();
 
     @Override
     public int compareTo(Order o) {
-        return this.orderDate.compareTo(o.orderDate);
+        return Integer.compare(this.orderDate, o.orderDate);
     }
     @Override
     public String toString() {

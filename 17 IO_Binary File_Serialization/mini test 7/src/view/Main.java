@@ -6,6 +6,7 @@ import controller.OrderManager;
 import model.Order;
 import storage.OrderStorage;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -90,7 +91,7 @@ public class Main {
         String orderId = scanner.nextLine();
         System.out.println("Nhập tên khách hàng:");
         String customerName = scanner.nextLine();
-        System.out.println("Ngày đặt hàng(yyyy/MM/dd):");
+        System.out.println("Ngày đặt hàng(yyyyMMdd):");
         int orderDate = scanner.nextInt();
         if (type == 1) {
             System.out.print("Giá sản phẩm: ");
@@ -117,6 +118,4 @@ public class Main {
     public static boolean isValidSize(String size) {
         return size != null && (size.equals("S") || size.equals("M") || size.equals("L") || size.equals("XL"));
     }
-
-
 }
