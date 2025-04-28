@@ -73,6 +73,7 @@ public class Main {
                         System.out.println("Đã tải " + loadedOrders.size() + " đơn hàng từ file.");
                         for (Order order : loadedOrders) {
                             order.displayInfo();  // Hiển thị thông tin đơn hàng
+                            System.out.println("---------------------------");
                         }
                     }
                     break;
