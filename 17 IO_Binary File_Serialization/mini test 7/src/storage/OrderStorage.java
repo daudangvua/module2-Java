@@ -8,11 +8,9 @@ import java.util.ArrayList;
 public class OrderStorage {
     public static void saveOrder(ArrayList<Order> orders) {
         File dir = new File("storage");
-        if (!dir.exists()) {
-            if (!dir.mkdirs()) {
+        if (!dir.exists() && !dir.mkdirs()) {
                 System.out.println("Không thể tạo thư mục storage!");
                 return;
-            }
         }
 
         File file = new File(dir,"order.txt");
