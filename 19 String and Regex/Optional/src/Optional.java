@@ -13,7 +13,7 @@ public class Optional {
             String content = scanner.next();
             scanner.close();
             content = content.replaceAll("\\n+", "");
-            Pattern p = Pattern.compile("article-title\">\\s*<a[^>]*>(.*?)</a>");
+            Pattern p = Pattern.compile("article-title\"><a[^>]*>(.*?)</a>");
             Matcher m = p.matcher(content);
             while (m.find()) {
                 System.out.println(m.group(1));
