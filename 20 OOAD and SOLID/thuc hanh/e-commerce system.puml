@@ -1,0 +1,123 @@
+@startuml
+!define table(x) class x << (T,#FFAAAA) >>
+!define primaryKey(x) <u>x</u>
+hide circle
+skinparam classAttributeIconSize 0
+
+table(Promotions) {
+  primaryKey(PromotionID)
+  ProductID
+  Description
+  Amount
+  DateStart
+  DateEnd
+}
+
+table(Products) {
+  primaryKey(ProductID)
+  Name
+  ConfigurationInfo
+}
+
+table(CartDetails) {
+  primaryKey(CartID)
+  ProductID
+  Quantity
+  UnitPrice
+  PromotionAmount
+}
+
+table(ShoppingCarts) {
+  primaryKey(CartID)
+  Date
+}
+
+table(Guests) {
+  CartID
+}
+
+table(ChatSession) {
+  primaryKey(SessionID)
+  UserID
+  SessionTime
+  MessageID
+  Message
+  Date
+}
+
+table(Users) {
+  primaryKey(UserID)
+  Name
+  Role
+}
+
+table(Customers) {
+  primaryKey(CustomerID)
+  Name
+  Address
+  Phone
+}
+
+table(Orders) {
+  primaryKey(OrderID)
+  Date
+  CustomerID
+}
+
+table(OrderDetails) {
+  primaryKey(OrderID)
+  ProductID
+  Quantity
+  UnitPrice
+  PromotionID
+}
+
+table(ShippingOrders) {
+  primaryKey(ShippingID)
+  OrderID
+  ShippingDate
+  DestinationDate
+  Fee
+  ShippingType
+}
+
+table(Payments) {
+  primaryKey(PaymentID)
+  OrderID
+  Amount
+  Date
+  Method
+}
+
+table(ProductTypes) {
+  primaryKey(ProductTypeName)
+}
+
+table(Providers) {
+  primaryKey(ProviderName)
+}
+
+table(Prices) {
+  primaryKey(PriceID)
+  ProductID
+  UnitPrice
+  DateStart
+  DateEnd
+}
+
+' Relationships
+Promotions --> Products : ProductID
+CartDetails --> Products : ProductID
+CartDetails --> ShoppingCarts : CartID
+ShoppingCarts --> Guests : CartID
+OrderDetails --> Orders : OrderID
+OrderDetails --> Products : ProductID
+OrderDetails --> Promotions : PromotionID
+Orders --> Customers : CustomerID
+ShippingOrders --> Orders : OrderID
+Payments --> Orders : OrderID
+Products --> Providers : ProviderName
+Products --> ProductTypes : ProductTypeName
+Prices --> Products : ProductID
+
+@enduml
